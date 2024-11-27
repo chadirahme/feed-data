@@ -1,0 +1,23 @@
+name: Feed Data
+on:
+  push:
+    branches:
+      - master
+      - dev
+    paths:
+      - 'src/**'
+      - '.github/workflows/app-workflow.yaml'
+jobs:
+  project-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step1
+        run: echo "Hello World!"
+      - name: my-step2
+        run: echo "Hello World 21!"
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'

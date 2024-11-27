@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: feed-data
+
+server:
+  port: 8001
